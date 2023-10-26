@@ -1,0 +1,109 @@
+[
+	// File tree commands
+	{
+	  "key": "a",
+	  "command": "explorer.newFile",
+	  "when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+	  "key": "shift+a",
+	  "command": "explorer.newFolder",
+	  "when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+	  "key": "r",
+	  "command": "renameFile",
+	  "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+	  "key": "c",
+	  "command": "filesExplorer.copy",
+	  "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+	  "key": "p",
+	  "command": "filesExplorer.paste",
+	  "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	// Navigations
+	{
+	  "key": "ctrl+l",
+	  "command": "workbench.action.focusActiveEditorGroup",
+	  "when": "sideBarFocus",
+	},
+	{
+	  "key": "ctrl+k",
+	  "command": "workbench.action.focusActiveEditorGroup",
+	  "when": "terminalFocus"
+	},
+	{
+	  "key": "ctrl+j",
+	  "command": "selectNextSuggestion",
+	  "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+	{
+	  "key": "ctrl+j",
+	  "command": "-workbench.action.togglePanel"
+	},
+	{
+	  "key": "ctrl+j",
+	  "command": "-editor.action.insertLineAfter",
+	  "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+	},
+	{
+	  "key": "ctrl+k",
+	  "command": "selectPrevSuggestion",
+	  "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+	{
+	  "key": "tab",
+	  "command": "selectNextSuggestion",
+	  "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+	{
+	  "key": "shift+tab",
+	  "command": "-acceptAlternativeSelectedSuggestion",
+	  "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
+	},
+	{
+	  "key": "shift+tab",
+	  "command": "selectPrevSuggestion",
+	  "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+	},
+	{
+	  "key": "ctrl+j",
+	  "command": "workbench.action.quickOpenNavigateNext",
+	  "when": "inQuickOpen"
+	},
+	{
+	  "key": "ctrl+k",
+	  "command": "workbench.action.quickOpenNavigatePrevious",
+	  "when": "inQuickOpen"
+	},
+	{
+	  "key": "tab",
+	  "command": "workbench.action.quickOpenNavigateNext",
+	  "when": "inQuickOpen"
+	},
+	{
+	  "key": "shift+tab",
+	  "command": "workbench.action.quickOpenNavigatePrevious",
+	  "when": "inQuickOpen"
+	},
+	// Terminal 
+	{
+	  "key": "ctrl+shift+t",
+	  "command": "workbench.action.terminal.focus",
+	  "when": "!terminalFocus"
+	},
+	{
+	  "key": "ctrl+shift+t",
+	  "command": "workbench.action.togglePanel"
+	},
+	// Project manager
+	{
+		"key": "ctrl+p",
+		"command": "projectManager.listProjects"
+	}
+]
+

@@ -1,0 +1,39 @@
+{
+  // VsCode-neovim extension
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/VSCodium/User/vscode-nvim.lua",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
+  // Basics
+  "editor.lineNumbers": "relative",
+  "zenMode.hideLineNumbers": false,
+  "editor.wordWrap": "off",
+  "editor.fontSize": 18,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.cursorBlinking": "blink",
+  "editor.fontFamily": "Cascadia Code",
+  "window.menuBarVisibility": "toggle",
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "window.restoreWindows": "none",
+  "window.zoomLevel": 1,
+  "editor.stickyScroll.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.suggest.insertMode": "replace",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.addMissingImports": true,
+    "source.organizeImports": true
+  },
+  "projectManager.git.baseFolders": ["~/Dev"],
+  "projectManager.sortList": "Recent",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "extensions.ignoreRecommendations": true,
+  "catppuccin.accentColor": "peach",
+}
+
+
