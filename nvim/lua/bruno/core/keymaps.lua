@@ -48,9 +48,6 @@ map("t", "<Esc><Esc>", "<cmd>ToggleTerm<CR>", { desc = "Close terminal" })
 -- Undotree
 map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Undo tree" })
 
--- Dashboard
-map("n", "<leader>b", vim.cmd.Dashboard, { desc = "Dashboard" })
-
 -- TODO-comments
 map("n", "<leader>m", "<cmd>TodoTelescope<CR>", { desc = "Show TODO comments" })
 
