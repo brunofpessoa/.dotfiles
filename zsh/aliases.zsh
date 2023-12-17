@@ -21,3 +21,6 @@ alias gd="git diff"
 alias gp="git push"
 alias gpl="git pull"
 alias gf="git fetch"
+
+# SEARCH NAD OPEN FILES WITH FZF
+alias f="fzf | xargs -r xdg-open" 
