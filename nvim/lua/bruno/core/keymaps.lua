@@ -48,7 +48,7 @@ map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "[U]ndo tree" })
 map("n", "<leader>c", "<cmd>TodoTelescope<CR>", { desc = "Show TODO [C]omments" })
 
 -- Hop
-map("n", "<leader>h", "<cmd>HopWord<CR>", { desc = "Hop Word" })
+map("n", "<leader>j", "<cmd>HopWord<CR>", { desc = "[J]ump to Word" })
 
 -- LSP
 map("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show [R]eferences" })
@@ -60,3 +60,15 @@ map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Line [d]iagnostic" })
 map("n", "<leader>r", vim.lsp.buf.rename, { desc = "[R]ename symbol" })
 map("n", "K", vim.lsp.buf.hover, { desc = "Show documentation under cursor" })
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ctions" })
+
+-- Harpoon
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+map("n", "<leader>ha", mark.add_file, { desc = "[A]dd to harpoon" })
+map("n", "<leader>hl", ui.toggle_quick_menu, { desc = "Harpoon [L]ist" })
+map("n", "<leader>ht", "<cmd>Telescope harpoon marks<CR>", { desc = "Harpon [T]elescope" })
+for i = 1, 4 do
+    map("n", "" .. i, function()
+        ui.nav_file(i)
+    end, { desc = "Harpoon to file" .. i })
+end
