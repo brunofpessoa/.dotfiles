@@ -46,3 +46,5 @@ export NNN_PLUG='p:preview-tui'
 export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_OPTS="A"
 source "$DOTFILES/bin/nnn_quit_cd.zsh"
+
+export PATH=$PATH:/usr/local/bin/jdk-21.0.1/bin

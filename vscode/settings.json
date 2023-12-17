@@ -9,19 +9,19 @@
   // Basics
   "editor.lineNumbers": "relative",
   "zenMode.hideLineNumbers": false,
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "editor.fontSize": 18,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.cursorBlinking": "blink",
   "editor.fontFamily": "Cascadia Code",
   "window.menuBarVisibility": "toggle",
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "breadcrumbs.enabled": false,
   "window.restoreWindows": "none",
   "window.zoomLevel": 1,
-  "editor.stickyScroll.enabled": true,
-  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.linkedEditing": false,
   "editor.suggest.insertMode": "replace",
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "editor.codeActionsOnSave": {
@@ -34,6 +34,7 @@
   "workbench.colorTheme": "Catppuccin Macchiato",
   "extensions.ignoreRecommendations": true,
   "catppuccin.accentColor": "peach",
+  "workbench.iconTheme": "material-icon-theme",
 }
 
 

@@ -1,4 +1,4 @@
 return {
-  "phaazon/hop.nvim",
-  config = true,
+    "phaazon/hop.nvim",
+    config = true,
 }
