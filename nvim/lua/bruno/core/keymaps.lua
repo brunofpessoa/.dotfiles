@@ -68,7 +68,7 @@ map("n", "<leader>ha", mark.add_file, { desc = "[A]dd to harpoon" })
 map("n", "<leader>hl", ui.toggle_quick_menu, { desc = "Harpoon [L]ist" })
 map("n", "<leader>ht", "<cmd>Telescope harpoon marks<CR>", { desc = "Harpon [T]elescope" })
 for i = 1, 4 do
-    map("n", "" .. i, function()
+    map("n", "<leader>" .. i, function()
         ui.nav_file(i)
     end, { desc = "Harpoon to file" .. i })
 end
