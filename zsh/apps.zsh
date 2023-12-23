@@ -48,3 +48,5 @@ export NNN_OPTS="A"
 source "$DOTFILES/bin/nnn_quit_cd.zsh"
 
 export PATH=$PATH:/usr/local/bin/jdk-21.0.1/bin
+
+export PATH=$PATH:/usr/local/bin/platform-tools

@@ -14,6 +14,12 @@ map("n", "<leader>wm", "<cmd>MaximizerToggle<CR>", { desc = "[W]indow [M]aximize
 map("n", "H", "^", { desc = "Go to beggining of the line" })
 map("n", "L", "$", { desc = "Go to end of the line" })
 
+-- Center view
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "n", "nzzzn", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "N", "Nzzzn", { noremap = true, silent = true })
+
 -- clear search highlights
 map("n", "<leader>n", ":nohl<CR>", { desc = "[N]o highlights" })
 
