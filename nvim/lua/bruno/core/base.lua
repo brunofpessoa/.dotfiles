@@ -30,10 +30,10 @@ vim.cmd("set cmdheight=0")
 vim.cmd("set nowrap")
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = "IncSearch",
-            timeout = 300,
-        })
-    end,
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 300,
+		})
+	end,
 })

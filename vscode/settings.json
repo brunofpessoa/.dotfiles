@@ -29,12 +29,10 @@
     "source.addMissingImports": true,
     "source.organizeImports": true
   },
-  "projectManager.git.baseFolders": ["~/Dev"],
+  "projectManager.git.baseFolders": ["~/workspace"],
   "projectManager.sortList": "Recent",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "extensions.ignoreRecommendations": true,
   "catppuccin.accentColor": "peach",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "material-icon-theme"
 }
-
-

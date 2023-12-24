@@ -14,4 +14,4 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "bruno.plugins" }, { import = "bruno.plugins.lsp" } })
+require("lazy").setup({ { import = "bruno.plugins" } })

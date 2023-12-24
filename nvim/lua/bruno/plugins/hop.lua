@@ -1,4 +1,5 @@
 return {
-    "phaazon/hop.nvim",
-    config = true,
+	"phaazon/hop.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	config = true,
 }

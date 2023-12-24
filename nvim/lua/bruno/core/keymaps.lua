@@ -46,7 +46,7 @@ map("t", "<Esc><Esc>", "<cmd>ToggleTerm<CR>", { desc = "Close terminal" })
 -- Undotree
 map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "[U]ndo tree" })
 
--- TODO-comments
+-- TODO comments
 map("n", "<leader>c", "<cmd>TodoTelescope<CR>", { desc = "Show TODO [C]omments" })
 
 -- Hop
@@ -82,3 +82,15 @@ map(
 	"<cmd>TSToolsAddMissingImports<cr> <cmd>TSToolsOrganizeImports<cr>",
 	{ desc = "TSTools Organize [I]mports" }
 )
+
+-- Conform
+map({ "n", "v" }, "<C-I>", function()
+	require("conform").format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 500,
+	})
+end, { desc = "Format code" })
+
+-- Project manager
+map("n", "<leader>m", "<cmd>Telescope neovim-project discover<cr>", { desc = "Project [M]anager" })

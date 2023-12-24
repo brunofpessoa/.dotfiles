@@ -1,4 +1,4 @@
 return {
-    "folke/zen-mode.nvim",
-    event = "VimEnter"
+	"folke/zen-mode.nvim",
+	event = "VimEnter",
 }

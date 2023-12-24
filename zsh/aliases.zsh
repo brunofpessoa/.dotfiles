@@ -1,7 +1,7 @@
 # DIRECTORIES ------------------
 alias down="/home/bruno/Downloads"
-alias doc="/home/bruno/Documentos"
-alias dev="/home/bruno/Dev"
+alias docs="/home/bruno/Documentos"
+alias work="/home/bruno/workspace"
 alias dotfiles="/home/bruno/.dotfiles"
 
 # APPS -------------------------
@@ -12,7 +12,6 @@ alias pyvenv="python3 -m venv .venv && source .venv/bin/activate"
 
 # GIT --------------------------
 alias ga="git add"
-alias gaa="git add ."
 alias gc="git commit -m"
 alias gca="git commit --amend -m"
 alias gl="git log"
@@ -22,5 +21,5 @@ alias gp="git push"
 alias gpl="git pull"
 alias gf="git fetch"
 
-# SEARCH NAD OPEN FILES WITH FZF
+# SEARCH AND OPEN FILES WITH FZF
 alias f="fzf | xargs -r xdg-open" 
