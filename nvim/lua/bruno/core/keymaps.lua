@@ -1,16 +1,12 @@
 local map = vim.keymap.set
 
--- set leader key to space
 vim.g.mapleader = " "
 
--- Paste without loosing what was copied
 map({ "n", "v" }, "<leader>p", '"_dP', { desc = "Paste without lose the previous copy" })
 
--- window management
 map("n", "<leader>ws", "<C-w>v", { desc = "[W]indows [S]plit" })
 map("n", "<leader>wm", "<cmd>MaximizerToggle<CR>", { desc = "[W]indow [M]aximize" })
 
--- Go to beggining or end of the line
 map("n", "H", "^", { desc = "Go to beggining of the line" })
 map("n", "L", "$", { desc = "Go to end of the line" })
 
@@ -74,7 +70,15 @@ map("n", "<leader>ha", mark.add_file, { desc = "[A]dd to harpoon" })
 map("n", "<leader>hl", ui.toggle_quick_menu, { desc = "Harpoon [L]ist" })
 map("n", "<leader>ht", "<cmd>Telescope harpoon marks<CR>", { desc = "Harpon [T]elescope" })
 for i = 1, 4 do
-    map("n", "<leader>" .. i, function()
-        ui.nav_file(i)
-    end, { desc = "Harpoon to file" .. i })
+	map("n", "<leader>" .. i, function()
+		ui.nav_file(i)
+	end, { desc = "Harpoon to file" .. i })
 end
+
+-- Typescript-tools
+map(
+	"n",
+	"<leader>i",
+	"<cmd>TSToolsAddMissingImports<cr> <cmd>TSToolsOrganizeImports<cr>",
+	{ desc = "TSTools Organize [I]mports" }
+)

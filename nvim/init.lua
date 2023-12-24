@@ -1,2 +1,3 @@
+require("bruno.core.base")
 require("bruno.lazy")
-require("bruno.core")
+require("bruno.core.keymaps")
