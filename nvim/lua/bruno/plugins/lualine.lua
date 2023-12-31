@@ -11,8 +11,8 @@ return {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diagnostics" },
 				lualine_c = {},
-				lualine_x = {},
-				lualine_y = { "diff" },
+				lualine_x = { "diff" },
+				lualine_y = { "datetime" },
 				lualine_z = { "filename" },
 			},
 		})
