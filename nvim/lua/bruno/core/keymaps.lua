@@ -7,16 +7,23 @@ map({ "n", "v" }, "<leader>p", '"_dP', { desc = "Paste without lose the previous
 map("n", "<leader>ws", "<C-w>v", { desc = "[W]indows [S]plit" })
 map("n", "<leader>wm", "<cmd>MaximizerToggle<CR>", { desc = "[W]indow [M]aximize" })
 
+-- Keep cursor at position when yanking
+map("x", "y", "ygv<Esc>", { noremap = true, silent = true })
+
+-- Move selection
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection Down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+
 map("n", "H", "^", { desc = "Go to beggining of the line" })
 map("n", "L", "$", { desc = "Go to end of the line" })
 
 -- Center view
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "n", "nzzzn", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "N", "Nzzzn", { noremap = true, silent = true })
+map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+map("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+map("n", "n", "nzzzn", { noremap = true, silent = true })
+map("n", "N", "Nzzzn", { noremap = true, silent = true })
 
--- clear search highlights
+-- Clear search highlights
 map("n", "<leader>n", ":nohl<CR>", { desc = "[N]o highlights" })
 
 -- Symbols outline
@@ -94,3 +101,17 @@ end, { desc = "Format code" })
 
 -- Project manager
 map("n", "<leader>m", "<cmd>Telescope neovim-project discover<cr>", { desc = "Project [M]anager" })
+
+-- Neoscroll
+local t = {}
+t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "150", nil } }
+t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "150", nil } }
+t["<C-b>"] = { "scroll", { "-vim.api.nvim_win_get_height(0)", "true", "300", [['circular']] } }
+t["<C-f>"] = { "scroll", { "vim.api.nvim_win_get_height(0)", "true", "300", [['circular']] } }
+t["<C-y>"] = { "scroll", { "-0.10", "false", "100", nil } }
+t["<C-e>"] = { "scroll", { "0.10", "false", "100", nil } }
+t["zt"] = { "zt", { "200" } }
+t["zz"] = { "zz", { "200" } }
+t["zb"] = { "zb", { "200" } }
+
+require("neoscroll.config").set_mappings(t)
