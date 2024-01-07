@@ -9,7 +9,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,3 +104,4 @@ export DOTFILES="$HOME/.dotfiles"
 ZSH_DOTFILES="$DOTFILES/zsh"
 source $ZSH_DOTFILES/aliases.zsh
 source $ZSH_DOTFILES/apps.zsh
+source $ZSH_DOTFILES/../bin/minimal.zsh

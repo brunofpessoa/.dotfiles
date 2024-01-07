@@ -115,3 +115,42 @@ t["zz"] = { "zz", { "200" } }
 t["zb"] = { "zb", { "200" } }
 
 require("neoscroll.config").set_mappings(t)
+
+-- Goto preview
+
+map(
+	"n",
+	"<leader>gd",
+	"<cmd>lua require('goto-preview').goto_preview_definition()<CR>",
+	{ desc = "Preview definition", noremap = true }
+)
+map(
+	"n",
+	"<leader>gt",
+	"<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
+	{ desc = "Preview type definition", noremap = true }
+)
+map(
+	"n",
+	"<leader>gi",
+	"<cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
+	{ desc = "Preview implementation", noremap = true }
+)
+map(
+	"n",
+	"<leader>gD",
+	"<cmd>lua require('goto-preview').goto_preview_declaration()<CR>",
+	{ desc = "Preview declaration", noremap = true }
+)
+map(
+	"n",
+	"<leader>gx",
+	"<cmd>lua require('goto-preview').close_all_win()<CR>",
+	{ desc = "Close all previews", noremap = true }
+)
+map(
+	"n",
+	"<leader>gr",
+	"<cmd>lua require('goto-preview').goto_preview_references()<CR>",
+	{ desc = "Preview references", noremap = true }
+)
