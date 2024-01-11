@@ -1,3 +1,5 @@
+export DOTFILES="$HOME/.dotfiles"
+
 # DIRECTORIES ------------------
 alias down="/home/bruno/Downloads"
 alias docs="/home/bruno/Documentos"
@@ -23,3 +25,6 @@ alias gf="git fetch"
 
 # SEARCH AND OPEN FILES WITH FZF
 alias f="fzf | xargs -r xdg-open" 
+
+# ORGANIZE FILES ---------------
+alias organize="$DOTFILES/bin/organize_files.sh"
