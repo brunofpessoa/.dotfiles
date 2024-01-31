@@ -28,3 +28,6 @@ alias f="fzf | xargs -r xdg-open"
 
 # ORGANIZE FILES ---------------
 alias organize="$DOTFILES/bin/organize_files.sh"
+
+# cheat.sh ---------------------
+alias c="$DOTFILES/bin/cht.sh"

@@ -24,7 +24,6 @@ return {
 				"eslint_d",
 				"tsserver",
 				"prettierd",
-				"emmet-ls",
 
 				"pyright",
 				"isort",

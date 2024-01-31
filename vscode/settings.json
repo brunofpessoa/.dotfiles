@@ -5,7 +5,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-
   // Basics
   "editor.lineNumbers": "relative",
   "zenMode.hideLineNumbers": false,
@@ -19,7 +18,7 @@
   "editor.minimap.enabled": true,
   "breadcrumbs.enabled": false,
   "window.restoreWindows": "none",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "editor.stickyScroll.enabled": false,
   "editor.linkedEditing": false,
   "editor.suggest.insertMode": "replace",
@@ -27,12 +26,16 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.addMissingImports": true,
-    "source.organizeImports": true
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
   },
-  "projectManager.git.baseFolders": ["~/workspace"],
+  "projectManager.git.baseFolders": [
+    "~/workspace"
+  ],
   "projectManager.sortList": "Recent",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "extensions.ignoreRecommendations": true,
   "catppuccin.accentColor": "peach",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "eslint.alwaysShowStatus": true
 }

@@ -9,7 +9,7 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		-- Variável para armazenar o tamanho atual da janela NvimTree
-		local tree_width = 35
+		local tree_width = 40
 
 		-- configure nvim-tree
 		nvimtree.setup({
@@ -21,7 +21,7 @@ return {
 			},
 			view = {
 				width = tree_width,
-				relativenumber = true,
+				-- relativenumber = true,
 			},
 			-- change folder arrow icons
 			renderer = {
@@ -32,17 +32,17 @@ return {
 					glyphs = {
 						modified = "●",
 						folder = {
-							arrow_closed = "", -- arrow when folder is closed
-							arrow_open = "", -- arrow when folder is open
+							-- arrow_closed = "", -- arrow when folder is closed
+							-- arrow_open = "", -- arrow when folder is open
 						},
-						git = {
-							staged = "✓",
-							unmerged = "",
-							renamed = "➜",
-							untracked = "",
-							deleted = "",
-							ignored = "◌",
-						},
+						-- git = {
+						-- 	staged = "✓",
+						-- 	unmerged = "",
+						-- 	renamed = "➜",
+						-- 	untracked = "",
+						-- 	deleted = "",
+						-- 	ignored = "◌",
+						-- },
 					},
 				},
 			},
@@ -58,7 +58,7 @@ return {
 				},
 			},
 			filters = {
-				dotfiles = true,
+				dotfiles = false,
 			},
 			git = {
 				ignore = false,

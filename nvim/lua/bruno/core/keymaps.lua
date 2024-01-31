@@ -35,15 +35,20 @@ map("n", "<C-Right>", "<cmd>NvimTreeResize +5<CR>", { desc = "Increase file expl
 map("n", "<C-Left>", "<cmd>NvimTreeResize -5<CR>", { desc = "Increase file explore width" })
 
 -- Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "[F]ind [F]iles in cwd" })
-map("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "[F]ind [G]it files" })
+local utils = require("telescope.utils")
+local builtin = require("telescope.builtin")
+local project_files = function()
+	local _, ret, _ = utils.get_os_command_output({ "git", "rev-parse", "--is-inside-work-tree" })
+	if ret == 0 then
+		builtin.git_files()
+	else
+		builtin.find_files()
+	end
+end
+map("n", "<leader>ff", project_files, { desc = "[F]ind [F]iles in cwd" })
 map("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "[F]ind [R]ecent files" })
--- necessary to install ripgrep to use the grep
 map("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "[F]ind [S]tring in cwd" })
 map("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "[F]ind string under [C]ursor in cwd" })
-
--- Zen mode
-map("n", "<leader>z", "<cmd>ZenMode<CR>", { desc = "[Z]en mode" })
 
 -- Terminal
 map("n", "<leader>t", "<cmd>ToggleTerm direction='float'<CR>", { desc = "[T]erminal" })
@@ -82,13 +87,8 @@ for i = 1, 4 do
 	end, { desc = "Harpoon to file" .. i })
 end
 
--- Typescript-tools
-map(
-	"n",
-	"<leader>i",
-	"<cmd>TSToolsAddMissingImports<cr> <cmd>TSToolsOrganizeImports<cr>",
-	{ desc = "TSTools Organize [I]mports" }
-)
+-- TS Organize imports
+map("n", "<leader>i", "<cmd>OrganizeImports<cr>", { desc = "TS Organize [I]mports" })
 
 -- Conform
 map({ "n", "v" }, "<C-I>", function()
@@ -115,42 +115,3 @@ t["zz"] = { "zz", { "200" } }
 t["zb"] = { "zb", { "200" } }
 
 require("neoscroll.config").set_mappings(t)
-
--- Goto preview
-
-map(
-	"n",
-	"<leader>gd",
-	"<cmd>lua require('goto-preview').goto_preview_definition()<CR>",
-	{ desc = "Preview definition", noremap = true }
-)
-map(
-	"n",
-	"<leader>gt",
-	"<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>",
-	{ desc = "Preview type definition", noremap = true }
-)
-map(
-	"n",
-	"<leader>gi",
-	"<cmd>lua require('goto-preview').goto_preview_implementation()<CR>",
-	{ desc = "Preview implementation", noremap = true }
-)
-map(
-	"n",
-	"<leader>gD",
-	"<cmd>lua require('goto-preview').goto_preview_declaration()<CR>",
-	{ desc = "Preview declaration", noremap = true }
-)
-map(
-	"n",
-	"<leader>gx",
-	"<cmd>lua require('goto-preview').close_all_win()<CR>",
-	{ desc = "Close all previews", noremap = true }
-)
-map(
-	"n",
-	"<leader>gr",
-	"<cmd>lua require('goto-preview').goto_preview_references()<CR>",
-	{ desc = "Preview references", noremap = true }
-)
